@@ -82,7 +82,7 @@ public class PageRankBigDecimal {
 		}
 		
 		// After convergence set the values of the nodes to the matrix values
-		for (int i = 0; i < network.size(); i++) network.get(i).setValue(Math.ceil(b[i][0].doubleValue()*variance)/variance);
+		for (int i = 0; i < network.size(); i++) network.get(i).setValue(Math.ceil(b[i][0].doubleValue()/variance)*variance);
 		
 		return network;
 	}
