@@ -81,7 +81,7 @@ public class PageRankBigDecimal {
 			b = constantDivide(b, leak);
 		}
 		
-		// After convergence set the values of the nodes to the matrix values
+		// After convergence set the values of the nodes to the matrix values and normalize
 		for (int i = 0; i < network.size(); i++) network.get(i).setValue(Math.ceil(b[i][0].doubleValue()/variance)*variance);
 		
 		return network;
